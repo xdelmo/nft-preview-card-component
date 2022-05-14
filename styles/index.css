@@ -1,0 +1,216 @@
+/* ---------------------- */
+/* Fonts                  */
+/* ---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* ---------------------- */
+/* Custom properties      */
+/* ---------------------- */
+
+:root {
+  --clr-primary-soft-blue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl(178, 100%, 50%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-mainBG-very-dark-blue: hsl(217, 54%, 11%);
+  --clr-neutral-cardBG-very-dark-blue: hsl(216, 50%, 16%);
+  --clr-neutral-line-very-dark-blue: hsl(215, 32%, 27%);
+
+  --ff-main: "Outfit", sans-serif;
+}
+
+/* ---------------------- */
+/* Reset                  */
+/* ---------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* ---------------------- */
+/* Typography             */
+/* ---------------------- */
+
+html {
+  font-family: var(--ff-main);
+}
+
+body {
+  background-color: var(--clr-neutral-mainBG-very-dark-blue);
+  font-size: 1.125rem;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--clr-neutral-white);
+}
+
+p {
+  font-weight: 300;
+
+  color: var(--clr-primary-soft-blue);
+}
+
+hr {
+  color: var(--clr-neutral-line-very-dark-blue);
+}
+
+footer {
+  padding: 2em;
+}
+
+span {
+  color: var(--clr-primary-soft-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-white);
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-primary-cyan);
+}
+
+/* ---------------------- */
+/* Utility classes        */
+/* ---------------------- */
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------------- */
+/* Components             */
+/* ---------------------- */
+
+/* card components */
+.card {
+  max-width: 22rem;
+  border-radius: 1.2em;
+  margin: 3em 0;
+  padding: 1.25em;
+  background-color: var(--clr-neutral-cardBG-very-dark-blue);
+}
+
+/* hover img classes */
+
+.card__img {
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.card__img__hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 0.5em;
+
+  /* to  fill the whole img div */
+  width: 100%;
+
+  background-color: hsla(178, 100%, 50%, 0.5);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.card__img:hover .card__img__hover {
+  opacity: 1;
+}
+
+/* downscale viewicon keeping 100% width on the main img div */
+.card__img__hover__icon {
+  transform: scale(0.2);
+}
+
+/* main image */
+.card__eth {
+  border-radius: 0.5em;
+}
+
+.card__title {
+  padding: 1em 0;
+}
+
+.card__title:hover,
+.card__title:focus {
+  color: var(--clr-primary-cyan);
+}
+
+.card__info {
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+.card__info__value {
+  font-size: 1em;
+  color: var(--clr-primary-cyan);
+}
+
+.card__info__img {
+  max-height: 15px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.card__info__left,
+.card__info__right {
+  align-items: center;
+}
+
+.card__creator {
+  align-items: center;
+  margin: 1em 0 0;
+}
+
+.card__creator__avatar {
+  max-height: 30px;
+  width: auto;
+  margin-right: 1em;
+
+  border: 1px solid var(--clr-neutral-white);
+  border-radius: 100%;
+}
+
+/* footer */
+
+.attribution {
+  color: var(--clr-white);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+/* ---------------------- */
+/* Media queries          */
+/* ---------------------- */
+
+/* @media (max-width: 375px) {
+
+} */
