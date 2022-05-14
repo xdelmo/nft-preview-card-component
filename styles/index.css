@@ -49,6 +49,12 @@ body {
   font-size: 1.125rem;
 }
 
+/* modified just for the sake of the challenge */
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 h3 {
   font-weight: 600;
   color: var(--clr-neutral-white);
